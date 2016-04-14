@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no" />
+    <title>Input address demo</title>
+    <link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/input_address.css">
+  </head>
+  <body>
+    <div>
+      <label>address-name
+        <input class="address_name" type="text" onclick="init_address()" editable="false">
+      </label><br>
+      <label>address
+        <textarea class="address"></textarea>
+      </label><br>
+      <label>longitude
+        <input class="longitude" type="number">
+      </label><br>
+      <label>latitude
+        <input class="latitude" type="number">
+      </label><br>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=11d18c6ac918c6880a21080e22eb8b49"></script>
+    <script src="js/input_address.js"></script>
+    <script>
+      $(function(){
+        input_address.key = 'da2a4ea93146faa96462effb9728c113';
+        input_address.address_name = '.address_name';
+        input_address.address_address = '.address';
+        input_address.address_longitude = '.longitude';
+        input_address.address_latitude = '.latitude';
+      });
+    </script>
+  </body>
+</html>
