@@ -37,7 +37,7 @@ function init_address(){
     <input type="text" class="search_name" onfocus="init_search()" onchange="search(this)" \
       placeholder="请输入想要搜索的位置名称"\
       >\
-    <i onclick="init_map()" class="fa fa-remove hide"></i>\
+    <i onclick="init_map()" class="fa fa-remove"></i>\
     </div>\
     <div class="modal_current">\
       <div id="map"></div>\
@@ -70,6 +70,7 @@ function init_map(){
   modal.find(".modal_current").show();
   modal.find(".modal_search").hide();
   modal.find(".fa-remove").hide();
+  modal.find(".search_name").val('');
   modal.find("ul").html('');
   create_map();
 }
@@ -142,7 +143,7 @@ function search(){
     success: function(data){
       if(data.status){
         for(var i=0; i<data.count; i++){
-          modal.find("ul").append('<li onclick="select_address(this)" data-longitude="'+data.pois[i].location.split(",")[0]+'" data-latitude="'+data.pois[i].location.split(",")[1]+'" data-city="'+data.pois[i].citycode+'"><i class="fa fa-map-marker"></i><div class="li-name">hhh</div><div class="li-address">'+data.pois[i].name+','+data.pois[i].address+'</div></li>');
+          modal.find("ul").append('<li onclick="select_address(this)" data-longitude="'+data.pois[i].location.split(",")[0]+'" data-latitude="'+data.pois[i].location.split(",")[1]+'" data-city="'+data.pois[i].citycode+'"><i class="fa fa-map-marker"></i><div class="li-name">'+data.pois[i].name+'</div><div class="li-address">'+data.pois[i].address+'</div></li>');
         }
       }
     }

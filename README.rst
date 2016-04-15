@@ -17,7 +17,7 @@
 
     ...
     <link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" src="input_address.css">
+    <link href="input_address.css" rel="stylesheet">
     ...
 
     ...
@@ -25,6 +25,12 @@
     <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=KEY1"></script>
     <script src="js/input_address.js"></script>
     ...
+
+绑定事件:
+
+.. code-block::
+
+    <button onclick="init_address()">获取地址</button>
 
 配置JS变量:
 
