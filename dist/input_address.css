@@ -36,12 +36,16 @@
     overflow: scroll;
     height: 100%; }
     #input_address_modal ul li {
+      color: #333;
       padding: .2rem 0;
       border-bottom: 0.08rem dashed #aaa; }
       #input_address_modal ul li .li-name {
         display: inline-block;
+        max-width: 90%;
+        white-space: nowrap;
         font-size: 1rem;
-        padding-left: .3rem; }
+        padding-left: .3rem;
+        overflow: hidden; }
       #input_address_modal ul li .li-address {
         height: 1rem;
         line-height: 1rem;

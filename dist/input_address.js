@@ -120,7 +120,7 @@ function get_pois(longitude, latitude)
       if(data.status){
         modal.data('current_city', data.regeocode.addressComponent.citycode);
         for(var i=0;i<data.regeocode.pois.length;i++){
-          modal.find("ul").append('<li onclick="select_address(this)" data-longitude="'+longitude+'" data-latitude="'+latitude+'" data-city="'+data.regeocode.addressComponent.citycode+'"><i class="fa fa-map-marker"></i><div class="li-name">香格里拉</div><div class="li-address">'+data.regeocode.pois[i].businessarea+data.regeocode.pois[i].name+'</div></li>');
+          modal.find("ul").append('<li onclick="select_address(this)" data-longitude="'+longitude+'" data-latitude="'+latitude+'" data-city="'+data.regeocode.addressComponent.citycode+'"><i class="fa fa-map-marker"></i><div class="li-name">'+data.regeocode.pois[i].name+'</div><div class="li-address">'+data.regeocode.pois[i].address+'</div></li>');
         }
       }
     }
